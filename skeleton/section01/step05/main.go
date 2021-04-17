@@ -3,7 +3,7 @@
 package main
 
 import (
-	"fmt"
+	fmt "fmt"
 	"math/rand"
 	"time"
 )
@@ -20,4 +20,18 @@ func main() {
 	// TODO: 変数numが0のときは"ノーマル"、
 	// 1のときは"R"、2のときは"SR"、
 	// 3のときは"XR"と表示する
+	var rank string
+
+	switch num {
+	case 0:
+		rank = "ノーマル"
+	case 1:
+		rank = "R"
+	case 2:
+		rank = "SR"
+	case 3:
+		rank = "XR"
+	}
+
+	fmt.Println(rank)
 }

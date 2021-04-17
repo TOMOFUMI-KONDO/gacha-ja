@@ -19,4 +19,12 @@ func main() {
 
 	// TODO: 変数numが0のときに"アタリ"と表示し
 	// そうでない場合は"ハズレ"と表示する
+	var result string
+	if num == 0 {
+		result = "アタリ"
+	} else {
+		result = "ハズレ"
+	}
+
+	fmt.Println(result)
 }
