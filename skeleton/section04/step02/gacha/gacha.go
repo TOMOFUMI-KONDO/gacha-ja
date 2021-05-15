@@ -18,7 +18,7 @@ func DrawN(p *Player, n int) ([]*Card, map[Rarity]int) {
 	summary := make(map[Rarity]int)
 	for i := 0; i < n; i++ {
 		results[i] = draw()
-		summary[results[i].Rarity]++
+		summary[results[i].rarity]++
 	}
 
 	// 変数resultsとsummaryの値を戻り値として返す
@@ -30,13 +30,12 @@ func draw() *Card {
 
 	switch {
 	case num < 80:
-		return &Card{Rarity: RarityN, Name: "スライム"}
+		return &Card{rarity: RarityN, name: "スライム"}
 	case num < 95:
-		return &Card{Rarity: RarityR, Name: "オーク"}
+		return &Card{rarity: RarityR, name: "オーク"}
 	case num < 99:
-		// TODO: RarityフィールドがRaritySRで
-		// Nameフィールドが"ドラゴン"のCard型のポインタを返す
+		return &Card{rarity: RaritySR, name: "ドラゴン"}
 	default:
-		return &Card{Rarity: RarityXR, Name: "イフリート"}
+		return &Card{rarity: RarityXR, name: "イフリート"}
 	}
 }
