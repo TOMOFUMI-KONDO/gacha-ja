@@ -37,6 +37,7 @@ func main() {
 	n := inputN(&p)
 	results, summary := drawN(&p, n)
 
+	fmt.Println(p.tickets)
 	fmt.Println(results)
 	fmt.Println(summary)
 }
